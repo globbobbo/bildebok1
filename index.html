@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log-in side</title>
+</head>
+<style>
+input[type=button] {
+    display: inline-block;
+    padding: 20px 175px;
+    font-size: 35px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(243, 241, 224);
+    background-color: rgb(22, 91, 94);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px rgb(205, 208, 219);
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    
+  }
+
+  input[type=button]:hover {
+    background-color:rgb(60, 142, 146);
+    transition: background 0.35s; 
+  }
+  input[type=button]:active {
+    background-color: rgb(115, 183, 187);
+    box-shadow: 0 0px rgb(243, 241, 224);
+    transform: translateY(3px);
+  }
+input[type=password]{
+    padding: 20px 140px;
+    text-align: center;
+    margin-bottom:20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form { 
+margin: 0 auto; 
+width: 450px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+</style>
+<body>
+    <div class="skjem">
+        <h1>Skriv in passord</h1>
+<form>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+</div>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "Midro1234!";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="bobbo.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
+</body>
+</html>
